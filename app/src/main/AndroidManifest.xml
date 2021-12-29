@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitaltBildstöd">
         <activity
+            android:name=".ActionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
