@@ -2,6 +2,8 @@ package com.example.digitaltbildstd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class ActionsActivity : AppCompatActivity() {
 
@@ -13,6 +15,13 @@ class ActionsActivity : AppCompatActivity() {
 
         createMockData()
 
+        val recyclerView = findViewById<RecyclerView>(R.id.actionsRecyclerView)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val adapter = ActionRecycleAdapter(this, listOfActions)
+
+        recyclerView.adapter = adapter
     }
 
     fun createMockData() {
