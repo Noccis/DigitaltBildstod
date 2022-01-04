@@ -8,23 +8,23 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-class ActionRecycleAdapter(val context : Context, val actions: MutableList<Action>) : RecyclerView.Adapter<ActionRecycleAdapter.ViewHolder>() {
+class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<Action>) : RecyclerView.Adapter<StepsRecycleAdapter.ViewHolder>() {
 
     val layoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int {
-        return actions.size
+        return actionSteps.size
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = layoutInflater.inflate(R.layout.list_item, parent, false)
+        val itemView = layoutInflater.inflate(R.layout.list_step, parent, false)
         return ViewHolder(itemView)
     }
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val action = actions[position]
+        val action = actionSteps[position]
         holder.actionImageView.setImageResource(action.image)
         holder.actionCheckbox.isChecked = action.done
 

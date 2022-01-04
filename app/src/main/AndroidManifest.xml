@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitaltBildstöd">
         <activity
+            android:name=".ActionStepsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAndEditSteps"
+            android:exported="false" />
+        <activity
             android:name=".ActionsActivity"
             android:exported="false" />
         <activity

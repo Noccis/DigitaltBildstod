@@ -13,7 +13,8 @@ data class Action(
   //  @ColumnInfo(name = "order") var order: Int,
    // @ColumnInfo(name = "steps")     var steps: Boolean
 ) {
-    // val listOfSteps: MutableList<Action>
+     var listOfSteps = mutableListOf<Action>()
+
 }
 
 /*

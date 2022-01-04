@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/activity_action_steps.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/activity_actions.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/activity_create_and_edit_steps.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/toniw/AndroidStudioProjects/DigitaltBildstd/app/src/main/res/layout/list_step.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
