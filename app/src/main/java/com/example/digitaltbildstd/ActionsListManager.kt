@@ -1,11 +1,16 @@
 package com.example.digitaltbildstd
 
+import android.util.Log
+
 object ActionsListManager {
 
+    val TAG = "dodo"
     var listOfActions = mutableListOf<Action >()
 
     init {
         createMockData()
+        Log.d(TAG, ":created moc data! ")
+        Log.d(TAG, "MockData size: ${ActionsListManager.listOfActions.size}")
     }
 
     fun createMockData() {

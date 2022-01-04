@@ -1,6 +1,7 @@
 package com.example.digitaltbildstd
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,7 @@ class ActionRecycleAdapter(val context : Context, val actions: MutableList<Actio
         val action = actions[position]
         holder.actionImageView.setImageResource(action.image)
         holder.actionCheckbox.isChecked = action.done
+        holder.actionPosition = position
 
     }
 
@@ -34,6 +36,15 @@ class ActionRecycleAdapter(val context : Context, val actions: MutableList<Actio
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val actionImageView = itemView.findViewById<ImageView>(R.id.actionImageView)
         val actionCheckbox = itemView.findViewById<CheckBox>(R.id.stepCheckBox)
+        var actionPosition = 0
+
+        init {
+            itemView.setOnClickListener {
+                val intent = Intent(context, ActionStepsActivity::class.java)
+                intent.putExtra( ACTIONPOSITIONKEY, actionPosition)
+                context.startActivity(intent)
+            }
+        }
 
 
     }

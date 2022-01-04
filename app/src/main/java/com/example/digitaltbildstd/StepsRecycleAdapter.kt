@@ -32,7 +32,7 @@ class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<A
 
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val actionImageView = itemView.findViewById<ImageView>(R.id.actionImageView)
+        val actionImageView = itemView.findViewById<ImageView>(R.id.stepsImageView)
         val actionCheckbox = itemView.findViewById<CheckBox>(R.id.stepCheckBox)
 
 
