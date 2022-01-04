@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ActionsActivity : AppCompatActivity() {
 
-val TAG = "dodo"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

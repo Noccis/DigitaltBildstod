@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<Action>) : RecyclerView.Adapter<StepsRecycleAdapter.ViewHolder>() {
 
-    val TAG = "dodo"
+    //val TAG = "dodo"
     val layoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int {

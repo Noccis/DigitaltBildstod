@@ -4,7 +4,7 @@ import android.util.Log
 
 object ActionsListManager {
 
-    val TAG = "dodo"
+   // val TAG = "dodo"
     var listOfActions = mutableListOf<Action >()
 
     init {

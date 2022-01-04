@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ActionRecycleAdapter(val context : Context, val actions: MutableList<Action>) : RecyclerView.Adapter<ActionRecycleAdapter.ViewHolder>() {
 
-    val TAG = "dodo"
+   // val TAG = "dodo"
     val layoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int {
