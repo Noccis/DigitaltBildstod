@@ -9,8 +9,8 @@ object ActionsListManager {
 
     init {
         createMockData()
-        Log.d(TAG, ":created moc data! ")
-        Log.d(TAG, "MockData size: ${ActionsListManager.listOfActions.size}")
+      //  Log.d(TAG, ":created moc data! ")
+    //    Log.d(TAG, "MockData size: ${ActionsListManager.listOfActions.size}")
     }
 
     fun createMockData() {

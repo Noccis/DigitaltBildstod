@@ -42,7 +42,7 @@ val TAG = "dodo"
             action.listOfSteps.add(a10)
             action.listOfSteps.add(a10)
 
-            Log.d(TAG, "createStepList: list size ${action.listOfSteps.size}")
+           // Log.d(TAG, "createStepList: list size ${action.listOfSteps.size}")
 
         }
 

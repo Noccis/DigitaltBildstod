@@ -2,6 +2,7 @@ package com.example.digitaltbildstd
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ActionRecycleAdapter(val context : Context, val actions: MutableList<Action>) : RecyclerView.Adapter<ActionRecycleAdapter.ViewHolder>() {
 
+    val TAG = "dodo"
     val layoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int {
@@ -44,6 +46,16 @@ class ActionRecycleAdapter(val context : Context, val actions: MutableList<Actio
                 intent.putExtra( ACTIONPOSITIONKEY, actionPosition)
                 context.startActivity(intent)
             }
+            
+            actionCheckbox.setOnClickListener { 
+            
+                actions[actionPosition].done = actionCheckbox.isChecked                     // Här sparas true eller false CHECKBOX
+                Log.d(TAG, "action is: ${ actions[actionPosition].done}: ")
+               // if ( actions[actionPosition].done) {
+                    // Reward
+             //   }
+            }
+
         }
 
 
