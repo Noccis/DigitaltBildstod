@@ -1,6 +1,7 @@
 package com.example.digitaltbildstd
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<Action>) : RecyclerView.Adapter<StepsRecycleAdapter.ViewHolder>() {
 
+    val TAG = "dodo"
     val layoutInflater = LayoutInflater.from(context)
 
     override fun getItemCount(): Int {
@@ -27,6 +29,8 @@ class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<A
         val action = actionSteps[position]
         holder.actionImageView.setImageResource(action.image)
         holder.actionCheckbox.isChecked = action.done
+
+        Log.d(TAG, "onBindViewHolder: Action steps: ${position}")
 
     }
 

@@ -27,7 +27,7 @@ class ActionStepsActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.stepsRecycleView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val adapter = StepsRecycleAdapter(this, ActionsListManager.listOfActions[0].listOfSteps)
+        val adapter = StepsRecycleAdapter(this, ActionsListManager.listOfActions[actionPosition].listOfSteps)
         recyclerView.adapter = adapter
 
 

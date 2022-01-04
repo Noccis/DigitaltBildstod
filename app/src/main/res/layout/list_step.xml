@@ -19,7 +19,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/vardag3och13" />
+            app:srcCompat="@drawable/emptyframe2" />
 
         <CheckBox
             android:id="@+id/stepCheckBox"

@@ -14,9 +14,6 @@ val TAG = "dodo"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actions)
 
-        createStepList()
-
-
 
         val recyclerView = findViewById<RecyclerView>(R.id.actionsRecyclerView)
 
@@ -30,7 +27,7 @@ val TAG = "dodo"
 
     fun createStepList() {
 
-        var a1 = Action( R.drawable.vardag2, false)
+        var a1 = Action( R.drawable.breakfast, false)
         var a10 = Action( R.drawable.sleep, false)
 
         for (action in ActionsListManager.listOfActions) {
