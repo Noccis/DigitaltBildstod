@@ -19,17 +19,17 @@ object ActionsListManager {
 
     fun createMockData() {
 
-        var a1 = Action( R.drawable.pee, false)
-        var a2 = Action( R.drawable.breakfast, false)
-        var a3 = Action( R.drawable.clothes, false)
-        var a4 = Action( R.drawable.outdoorclothes, false)
-        var a5 = Action( R.drawable.car, false)
-        var a6 = Action( R.drawable.school, false)
-        var a7 = Action( R.drawable.car, false)
-        var a8 = Action( R.drawable.brushteeth, false)
-        var a9 = Action( R.drawable.tablet, false)
-        var a10 = Action( R.drawable.pee, false)
-        var a11 = Action( R.drawable.sleep, false)
+        var a1 = Action(0, R.drawable.pee, false)
+        var a2 = Action( 0, R.drawable.breakfast, false)
+        var a3 = Action( 0, R.drawable.clothes, false)
+        var a4 = Action( 0, R.drawable.outdoorclothes, false)
+        var a5 = Action( 0, R.drawable.car, false)
+        var a6 = Action( 0, R.drawable.school, false)
+        var a7 = Action( 0, R.drawable.car, false)
+        var a8 = Action( 0, R.drawable.brushteeth, false)
+        var a9 = Action( 0, R.drawable.tablet, false)
+        var a10 = Action(0, R.drawable.pee, false)
+        var a11 = Action( 0, R.drawable.sleep, false)
 
         listOfActions.add(a1)
         listOfActions.add(a2)
@@ -47,15 +47,15 @@ object ActionsListManager {
 
     }
     fun createtoiletSteps() {
-        var step1 = Action( R.drawable.pantsdown, false)
-        var step2 = Action( R.drawable.toa2, false)
-        var step3 = Action( R.drawable.paper, false)
-        var step4 = Action( R.drawable.pantsup, false)
-        var step5 = Action( R.drawable.seatdown, false)
-        var step6 = Action( R.drawable.flush, false)
-        var step7 = Action( R.drawable.soap, false)
-        var step8 = Action( R.drawable.washhands, false)
-        var step9 = Action( R.drawable.dry, false)
+        var step1 = Action(0, R.drawable.pantsdown, false)
+        var step2 = Action(0, R.drawable.toa2, false)
+        var step3 = Action(0, R.drawable.paper, false)
+        var step4 = Action(0, R.drawable.pantsup, false)
+        var step5 = Action(0, R.drawable.seatdown, false)
+        var step6 = Action(0, R.drawable.flush, false)
+        var step7 = Action(0, R.drawable.soap, false)
+        var step8 = Action(0, R.drawable.washhands, false)
+        var step9 = Action(0, R.drawable.dry, false)
 
         // Adds steps to pee Action
         listOfActions[0].listOfSteps.add(step1)
@@ -84,10 +84,10 @@ object ActionsListManager {
 
     fun createBrushteethSteps() {
 
-        val bstep1 = Action(R.drawable.prepare, false)
-        val bstep2 = Action(R.drawable.toothpaste, false)
-        val bstep3 = Action(R.drawable.brushteeth, false)
-        val bstep4 = Action(R.drawable.rinse, false)
+        val bstep1 = Action(0, R.drawable.prepare, false)
+        val bstep2 = Action(0, R.drawable.toothpaste, false)
+        val bstep3 = Action(0, R.drawable.brushteeth, false)
+        val bstep4 = Action(0, R.drawable.rinse, false)
 
         listOfActions[7].listOfSteps.add(bstep1)
         listOfActions[7].listOfSteps.add(bstep2)

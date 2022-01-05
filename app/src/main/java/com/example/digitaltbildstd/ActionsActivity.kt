@@ -5,15 +5,24 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
 
-class ActionsActivity : AppCompatActivity() {
+class ActionsActivity : AppCompatActivity() , CoroutineScope {
 
+    private lateinit var job : Job
+    override val coroutineContext: CoroutineContext
+        get() = Dispatchers.Main + job
 
+    lateinit var db : AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actions)
 
+        job = Job()
+
+        db = AppDatabase.getInstance(this)
 
         val recyclerView = findViewById<RecyclerView>(R.id.actionsRecyclerView)
 
@@ -24,25 +33,40 @@ class ActionsActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
+    fun addNewWord(action: Action) {
 
-    fun createStepList() {
-
-        var a1 = Action( R.drawable.breakfast, false)
-        var a10 = Action( R.drawable.sleep, false)
-
-        for (action in ActionsListManager.listOfActions) {
-
-            action.listOfSteps.add(a1)
-            action.listOfSteps.add(a1)
-            action.listOfSteps.add(a1)
-            action.listOfSteps.add(a10)
-            action.listOfSteps.add(a10)
-            action.listOfSteps.add(a10)
-
-           // Log.d(TAG, "createStepList: list size ${action.listOfSteps.size}")
-
+        launch(Dispatchers.IO) {
+            db.actionDao.insert(action)
         }
 
     }
+
+    fun loadAllWords() {
+
+        val actions = async(Dispatchers.IO)
+        {
+            db.actionDao.getAll()
+
+        }
+        launch {
+            val list = actions.await().toMutableList()
+            ActionsListManager.listOfActions = list
+        }
+    }
+
+    /*
+     fun loadAllWords() {
+        val words = async(Dispatchers.IO) {
+            db.wordDao.getAll()
+        }
+
+        launch {
+            val list = words.await().toMutableList()
+            wordList = WordList(list)
+            loadNewWord()
+        }
+    }
+     */
+
 
 }
