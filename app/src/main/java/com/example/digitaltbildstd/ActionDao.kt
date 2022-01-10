@@ -3,6 +3,7 @@ package com.example.digitaltbildstd
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.digitaltbildstd.entities.Action
 
 interface ActionDao {
 

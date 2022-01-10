@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.digitaltbildstd.entities.Action
 
 class StepsRecycleAdapter (val context : Context, val actionSteps: MutableList<Action>) : RecyclerView.Adapter<StepsRecycleAdapter.ViewHolder>() {
 

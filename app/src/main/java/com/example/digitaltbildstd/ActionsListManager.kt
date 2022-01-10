@@ -1,20 +1,19 @@
 package com.example.digitaltbildstd
 
 import android.util.Log
+import com.example.digitaltbildstd.entities.Action
 
 object ActionsListManager {
 
    // val TAG = "dodo"
-    var listOfActions = mutableListOf<Action >()
+    var listOfActions = mutableListOf<Action>()
 
     init {
         if (listOfActions.size == 0) {
             createMockData()
-            createBrushteethSteps()
-            createtoiletSteps()
+   //         createBrushteethSteps()
+  //          createtoiletSteps()
         }
-      //  Log.d(TAG, ":created moc data! ")
-    //    Log.d(TAG, "MockData size: ${ActionsListManager.listOfActions.size}")
     }
 
     fun createMockData() {
@@ -22,7 +21,8 @@ object ActionsListManager {
         var a1 = Action(0, R.drawable.pee, false)
         var a2 = Action( 0, R.drawable.breakfast, false)
         var a3 = Action( 0, R.drawable.clothes, false)
-        var a4 = Action( 0, R.drawable.outdoorclothes, false)
+        /*
+          var a4 = Action( 0, R.drawable.outdoorclothes, false)
         var a5 = Action( 0, R.drawable.car, false)
         var a6 = Action( 0, R.drawable.school, false)
         var a7 = Action( 0, R.drawable.car, false)
@@ -30,11 +30,13 @@ object ActionsListManager {
         var a9 = Action( 0, R.drawable.tablet, false)
         var a10 = Action(0, R.drawable.pee, false)
         var a11 = Action( 0, R.drawable.sleep, false)
+         */
+
 
         listOfActions.add(a1)
         listOfActions.add(a2)
         listOfActions.add(a3)
-        listOfActions.add(a4)
+    /*    listOfActions.add(a4)
         listOfActions.add(a5)
         listOfActions.add(a6)
         listOfActions.add(a7)
@@ -43,9 +45,12 @@ object ActionsListManager {
         listOfActions.add(a10)
         listOfActions.add(a11)
 
+     */
+
 
 
     }
+    /*
     fun createtoiletSteps() {
         var step1 = Action(0, R.drawable.pantsdown, false)
         var step2 = Action(0, R.drawable.toa2, false)
@@ -95,4 +100,6 @@ object ActionsListManager {
         listOfActions[7].listOfSteps.add(bstep4)
 
     }
+
+     */
 }

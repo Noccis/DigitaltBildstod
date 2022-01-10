@@ -16,7 +16,7 @@ class ActionStepsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_action_steps)
-
+/*
         val actionPosition = intent.getIntExtra(ACTIONPOSITIONKEY, 0)
 
         backButton = findViewById(R.id.backButton)
@@ -30,9 +30,13 @@ class ActionStepsActivity : AppCompatActivity() {
         val adapter = StepsRecycleAdapter(this, ActionsListManager.listOfActions[actionPosition].listOfSteps)
         recyclerView.adapter = adapter
 
+ */
+
 
 
     }
+
+
 
 
 }

@@ -1,21 +1,17 @@
-package com.example.digitaltbildstd
+package com.example.digitaltbildstd.entities
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
- @Entity(tableName = "action_table")
+@Entity(tableName = "action_table")
 data class Action(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "image") var image: Int,
-   @ColumnInfo(name = "done") var done: Boolean,
- //   @ColumnInfo(name = "image_text") var imageText: String,
-  //  @ColumnInfo(name = "order") var order: Int,
-   // @ColumnInfo(name = "steps")     var steps: Boolean
-) {
-     var listOfSteps = mutableListOf<Action>()
-
-}
+    var image: Int,
+    var done: Boolean,
+    //   @ColumnInfo(name = "image_text") var imageText: String,
+    //  @ColumnInfo(name = "order") var order: Int,
+    // @ColumnInfo(name = "steps")     var steps: Boolean
+)
 
 /*
 
